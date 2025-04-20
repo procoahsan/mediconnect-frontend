@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import Image from "next/image"
+import Vid from '@/images/medical.gif'
 
 export default function Home() {
   return (
@@ -49,7 +50,7 @@ export default function Home() {
           </div>
           <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
             <Image
-              src="/placeholder.svg?height=400&width=600"
+              src={Vid}
               alt="Medical professionals"
               fill
               className="object-cover"
