@@ -1,11 +1,36 @@
-import { Button } from "@/components/ui/button"
-import Link from "next/link"
-import Image from "next/image"
-import Vid from '@/images/medical.gif'
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import Image from "next/image";
+import Vid from "@/images/medical.gif";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
+    <div className="min-h-screen bg-gradient-to-r from-blue-50 to-white">
+      <div className="absolute inset-0 opacity-20 pointer-events-none">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="100%"
+          height="100%"
+          className="text-blue-500"
+        >
+          <defs>
+            <pattern
+              id="medical-pattern"
+              patternUnits="userSpaceOnUse"
+              width="80"
+              height="80"
+              patternTransform="rotate(45)"
+            >
+              <path
+                d="M20 0h5v20h-5zM40 0h5v20h-5zM60 0h5v20h-5z"
+                fill="currentColor"
+                opacity="0.3"
+              />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#medical-pattern)" />
+        </svg>
+      </div>
       <div className="container mx-auto px-4 py-16">
         <header className="flex justify-between items-center mb-16">
           <div className="flex items-center">
@@ -35,9 +60,12 @@ export default function Home() {
 
         <main className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Your Health, Our Priority</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              Your Health, Our Priority
+            </h2>
             <p className="text-xl text-gray-600 mb-8">
-              Connect with qualified doctors, book appointments, and get medical advice all in one place.
+              Connect with qualified doctors, book appointments, and get medical
+              advice all in one place.
             </p>
             <div className="space-x-4">
               <Button size="lg" asChild>
@@ -81,7 +109,9 @@ export default function Home() {
               </svg>
             </div>
             <h3 className="text-xl font-semibold mb-2">Book Appointments</h3>
-            <p className="text-gray-600">Schedule appointments with specialists at your convenience.</p>
+            <p className="text-gray-600">
+              Schedule appointments with specialists at your convenience.
+            </p>
           </div>
           <div className="bg-white p-6 rounded-lg shadow-md">
             <div className="h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
@@ -100,7 +130,9 @@ export default function Home() {
               </svg>
             </div>
             <h3 className="text-xl font-semibold mb-2">Medical Chat</h3>
-            <p className="text-gray-600">Get medical advice from our AI-powered chat system.</p>
+            <p className="text-gray-600">
+              Get medical advice from our AI-powered chat system.
+            </p>
           </div>
           <div className="bg-white p-6 rounded-lg shadow-md">
             <div className="h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
@@ -118,10 +150,12 @@ export default function Home() {
               </svg>
             </div>
             <h3 className="text-xl font-semibold mb-2">Health Records</h3>
-            <p className="text-gray-600">Access your medical history and records securely.</p>
+            <p className="text-gray-600">
+              Access your medical history and records securely.
+            </p>
           </div>
         </section>
       </div>
     </div>
-  )
+  );
 }
